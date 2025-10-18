@@ -13,11 +13,11 @@ def print_step(step_num, description):
     print(f"STEP {step_num}: {description}")
     print("="*70 + "\n")
 
-def run_command(cmd, description):
-    """Run a command and display output."""
+def run_command(script, description):
+    """Run a Python script and display output."""
     print(f"Running: {description}")
-    print(f"Command: {cmd}\n")
-    result = subprocess.run(cmd, shell=True)
+    print(f"Script: {script}\n")
+    result = subprocess.run([sys.executable, script])
     return result.returncode == 0
 
 def main():
@@ -45,7 +45,7 @@ def main():
     print("  c) Manually digitize graphs using WebPlotDigitizer")
     print("\nFor this demo, we'll create sample data automatically:\n")
     
-    if not run_command("python create_sample_data.py", "Create sample data"):
+    if not run_command("create_sample_data.py", "Create sample data"):
         print("✗ Failed to create sample data")
         return 1
     
@@ -53,7 +53,7 @@ def main():
     print_step(2, "Generating Qc vs COP Graphs")
     print("Now we'll generate the final graphs from the sample data:\n")
     
-    if not run_command("python step4_generate_graphs.py", "Generate graphs"):
+    if not run_command("step4_generate_graphs.py", "Generate graphs"):
         print("✗ Failed to generate graphs")
         return 1
     
