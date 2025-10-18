@@ -164,6 +164,14 @@ The final output is a set of graphs showing the relationship between:
 
 With separate plots for different ΔT (temperature differential) values, allowing you to select the optimal Peltier element for your cooler design based on your operating conditions.
 
+### Example Output
+
+The pipeline generates graphs like this (based on sample data):
+
+![Example Output](examples/example_output.png)
+
+This example shows Qc vs COP for the TEC1-12715 element at different temperature differentials (ΔT = 0°C, 10°C, 20°C, 30°C, 40°C, 50°C). Each point represents a different operating voltage.
+
 ## Notes
 
 - Step 3 requires manual digitization because automatic graph digitization from images can be error-prone
