@@ -30,6 +30,13 @@ cd peltier
 pip install -r requirements.txt
 ```
 
+3. Run the quick start demo (optional):
+```bash
+python quickstart.py
+```
+
+This will create sample data and generate example graphs so you can see how the pipeline works.
+
 ## Usage
 
 The analysis pipeline consists of 4 steps:
