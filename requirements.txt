@@ -1,0 +1,7 @@
+requests
+PyMuPDF
+Pillow
+opencv-python
+numpy
+matplotlib
+scipy
